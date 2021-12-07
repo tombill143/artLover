@@ -1,61 +1,38 @@
 package com.example.artlover.Entity;
 
 public class user {
-  public String name;
-  public int age;
-  public int phoneNumber;
-  public String address;
-  public String emailAddress;
-  public String updatePhoneNumber;
 
-  public String getName() {
-    return name;
+  private String userId;
+  private String password;
+
+  public String getUserId() {
+    return userId;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setUserId(String userId) {
+    this.userId = userId;
   }
 
-  public int getAge() {
-    return age;
+  public String getPassword() {
+    return password;
   }
 
-  public void setAge(int age) {
-    this.age = age;
+  public void setPassword(String password) {
+    this.password = password;
   }
 
-  public int getPhoneNumber() {
-    return phoneNumber;
+  public static boolean verifyPassword(){
+    return true;
   }
 
-  public void setPhoneNumber(int phoneNumber) {
-    this.phoneNumber = phoneNumber;
-  }
 
-  public String getAddress() {
-    return address;
+  @Override
+  public String toString() {
+    return "user{" +
+            "userId='" + userId + '\'' +
+            ", password='" + password + '\'' +
+            '}';
   }
-
-  public void setAddress(String address) {
-    this.address = address;
-  }
-
-  public String getEmailAdress() {
-    return emailAddress;
-  }
-
-  public void setEmailAdress(String emailAddress) {
-    this.emailAddress = emailAddress;
-  }
-
-  public String getUpdatePhoneNumber() {
-    return updatePhoneNumber;
-  }
-
-  public void setUpdatePhoneNumber(String updatePhoneNumber) {
-    this.updatePhoneNumber = updatePhoneNumber;
-  }
-
 
 
 }
