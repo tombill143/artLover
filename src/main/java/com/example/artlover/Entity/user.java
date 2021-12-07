@@ -8,6 +8,7 @@ public class user {
   public String emailAddress;
   public String updatePhoneNumber;
 
+
   public String getName() {
     return name;
   }
@@ -56,6 +57,16 @@ public class user {
     this.updatePhoneNumber = updatePhoneNumber;
   }
 
-
+  @Override
+  public String toString() {
+    return "user{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", phoneNumber=" + phoneNumber +
+            ", address='" + address + '\'' +
+            ", emailAddress='" + emailAddress + '\'' +
+            ", updatePhoneNumber='" + updatePhoneNumber + '\'' +
+            '}';
+  }
 
 }
