@@ -66,10 +66,19 @@ public class artist2 {
         this.creditCardInfo = creditCardInfo;
     }
 
+    public artist2() {
 
+    }
 
-
-
+    public artist2(String name, int age, String address, int phoneNumber, int emailAddress, String updatePhoneNumber, String creditCardInfo) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
+        this.updatePhoneNumber = updatePhoneNumber;
+        this.creditCardInfo = creditCardInfo;
+    }
 }
 
 

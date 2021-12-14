@@ -1,5 +1,19 @@
 package com.example.artlover.Entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "artist1", schema = "artlover")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class artist1 {
   public String name;
   public int age;
@@ -67,5 +81,14 @@ public class artist1 {
             ", emailAddress='" + emailAddress + '\'' +
             ", updatePhoneNumber='" + updatePhoneNumber + '\'' +
             '}';
+  }
+
+  public artist1(String name, int age, int phoneNumber, String address, String emailAddress, String updatePhoneNumber) {
+    this.name = name;
+    this.age = age;
+    this.phoneNumber = phoneNumber;
+    this.address = address;
+    this.emailAddress = emailAddress;
+    this.updatePhoneNumber = updatePhoneNumber;
   }
 }

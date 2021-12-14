@@ -29,8 +29,12 @@ public class artist2ShoppingCart {
             '}';
   }
 
+  public artist2ShoppingCart() {
 
+  }
 
-
-
+  public artist2ShoppingCart(int portraitId, int quantity) {
+    this.portraitId = portraitId;
+    this.quantity = quantity;
+  }
 }

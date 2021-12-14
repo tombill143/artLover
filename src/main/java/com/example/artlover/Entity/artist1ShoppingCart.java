@@ -28,9 +28,12 @@ public class artist1ShoppingCart {
             ", quantity=" + quantity +
             '}';
   }
+  public artist1ShoppingCart() {
 
+  }
 
-
-
-
+  public artist1ShoppingCart(int portraitId, int quantity) {
+    this.portraitId = portraitId;
+    this.quantity = quantity;
+  }
 }
