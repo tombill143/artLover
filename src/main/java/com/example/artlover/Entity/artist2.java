@@ -1,13 +1,42 @@
 package com.example.artlover.Entity;
-import java.util.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "artist2", schema = "artlover")
 public class artist2 {
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @Column(nullable = false)
     String name;
+
+    @Column(nullable = false)
     int age;
+
+    @Column(nullable = false)
     String address;
+
+    @Column(nullable = false)
     int phoneNumber;
+
+    @Column(nullable = false)
     int emailAddress;
+
+    @Column(nullable = false)
     String updatePhoneNumber;
+
+    @Column(nullable = false)
     String creditCardInfo;
 
     public String getName() {
@@ -64,10 +93,6 @@ public class artist2 {
 
     public void setCreditCardInfo(String creditCardInfo) {
         this.creditCardInfo = creditCardInfo;
-    }
-
-    public artist2() {
-
     }
 
     public artist2(String name, int age, String address, int phoneNumber, int emailAddress, String updatePhoneNumber, String creditCardInfo) {

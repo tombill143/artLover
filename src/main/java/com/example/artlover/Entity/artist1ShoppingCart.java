@@ -1,8 +1,29 @@
 package com.example.artlover.Entity;
 
-public class artist1ShoppingCart {
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "artist1ShoppingCart", schema = "artlover")
+
+public class artist1ShoppingCart {
+  @Id
+  @Column(name = "id", nullable = false)
+  private Long id;
+
+  @Column(nullable = false)
   private int portraitId;
+
+  @Column(nullable = false)
   private int quantity;
 
   public int getPortraitId() {
@@ -27,9 +48,6 @@ public class artist1ShoppingCart {
             "portraitId=" + portraitId +
             ", quantity=" + quantity +
             '}';
-  }
-  public artist1ShoppingCart() {
-
   }
 
   public artist1ShoppingCart(int portraitId, int quantity) {

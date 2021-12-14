@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Getter
@@ -15,11 +17,26 @@ import javax.persistence.Table;
 @Table(name = "artist1", schema = "artlover")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class artist1 {
+  @Id
+  @Column(name = "id", nullable = false)
+  private Long id;
+
+  @Column(nullable = false)
   public String name;
+
+  @Column(nullable = false)
   public int age;
+
+  @Column(nullable = false)
   public int phoneNumber;
+
+  @Column(nullable = false)
   public String address;
+
+  @Column(nullable = false)
   public String emailAddress;
+
+  @Column(nullable = false)
   public String updatePhoneNumber;
 
 
@@ -91,4 +108,6 @@ public class artist1 {
     this.emailAddress = emailAddress;
     this.updatePhoneNumber = updatePhoneNumber;
   }
+
+
 }
