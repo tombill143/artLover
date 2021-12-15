@@ -41,14 +41,14 @@ public class portrait {
   @Column(nullable = false)
   private String nameOfPortrait;
 
-  @JsonIgnore
-  @ManyToMany(mappedBy = "portrait", fetch = FetchType.LAZY)
-  private List<portrait> movies = new ArrayList<portrait>();
+  //@JsonIgnore
+  //@ManyToMany(mappedBy = "portrait", fetch = FetchType.LAZY)
+  //private List<portrait> movies = new ArrayList<portrait>();
 
-  @ManyToMany
-  @JoinTable(name = "portrait_portrait",
-          joinColumns = @JoinColumn(name = "portrait_1_portrait_id", referencedColumnName = "portrait_2_portrait_id"))
-  private List<portrait> portrait;
+  //@ManyToMany
+  //@JoinTable(name = "portrait_portrait",
+  //        joinColumns = @JoinColumn(name = "portrait_1_portrait_id", referencedColumnName = "portrait_2_portrait_id"))
+  //private List<portrait> portrait;
 
 
   public int getId() {

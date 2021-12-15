@@ -1,5 +1,7 @@
 package com.example.artlover.Entity;
 
+
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +24,21 @@ public class artist1 {
   private Long id;
 
   @Column(nullable = false)
-  public String name;
+  public String firstName;
+
+  @Column(nullable = false)
+  public String secondName;
+
+
+
+  @Column(nullable = false)
+  public String getSecondName() {
+    return secondName;
+  }
+
+  public void setSecondName(String secondName) {
+    this.secondName = secondName;
+  }
 
   @Column(nullable = false)
   public int age;
@@ -41,11 +57,11 @@ public class artist1 {
 
 
   public String getName() {
-    return name;
+    return firstName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setName(String firstName) {
+    this.firstName = firstName;
   }
 
   public int getAge() {
@@ -91,7 +107,8 @@ public class artist1 {
   @Override
   public String toString() {
     return "user{" +
-            "name='" + name + '\'' +
+            "first name='" + firstName + '\'' +
+            "secondName='" + secondName + '\'' +
             ", age=" + age +
             ", phoneNumber=" + phoneNumber +
             ", address='" + address + '\'' +
@@ -100,8 +117,9 @@ public class artist1 {
             '}';
   }
 
-  public artist1(String name, int age, int phoneNumber, String address, String emailAddress, String updatePhoneNumber) {
-    this.name = name;
+  public artist1(String firstName, int age, int phoneNumber, String address, String emailAddress, String updatePhoneNumber) {
+    this.firstName = firstName;
+    this.secondName = secondName;
     this.age = age;
     this.phoneNumber = phoneNumber;
     this.address = address;
