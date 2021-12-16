@@ -2,11 +2,14 @@ package com.example.artlover.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Artist1 {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "artist_one_id", nullable = false)
   private Long artistOneId;
 

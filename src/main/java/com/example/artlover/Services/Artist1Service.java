@@ -9,6 +9,10 @@ public class Artist1Service {
     @Autowired
     private final Artist1Repo artist1Repo;
 
+    public Artist1Repo getArtist1Repo() {
+      return artist1Repo;
+    }
+
     public Artist1Service(Artist1Repo artist1Repo) {
       this.artist1Repo = artist1Repo;
     }
