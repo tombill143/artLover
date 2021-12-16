@@ -1,9 +1,26 @@
 package com.example.artlover.Entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Artist1ShoppingCart {
+  @Id
+  @Column(name = "shopping_cart_id", nullable = false)
+  private Long shoppingCartId;
+
   private int id;
   private int portraitId;
   private int quantity;
+
+  public Long getShoppingCartId() {
+    return shoppingCartId;
+  }
+
+  public void setShoppingCartId(Long shoppingCartId) {
+    this.shoppingCartId = shoppingCartId;
+  }
 
   public int getId() {
     return id;

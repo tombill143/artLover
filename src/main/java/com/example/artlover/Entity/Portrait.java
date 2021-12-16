@@ -1,16 +1,21 @@
 package com.example.artlover.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Portrait {
-  private int portraitId;
+  @Id
+  private Long portraitId;
   private int dateOfCreation;
   private String nameOfArtist;
   private String nameOfPortrait;
 
-  public int getPortraitId() {
+  public Long getPortraitId() {
     return portraitId;
   }
 
-  public void setPortraitId(int portraitId) {
+  public void setPortraitId(Long portraitId) {
     this.portraitId = portraitId;
   }
 
@@ -38,7 +43,7 @@ public class Portrait {
     this.nameOfPortrait = nameOfPortrait;
   }
 
-  public Portrait(int portraitId) {
+  public Portrait(Long portraitId) {
     this.portraitId = portraitId;
   }
 
@@ -46,7 +51,7 @@ public class Portrait {
 
   }
 
-  public Portrait(int portraitId, int dateOfCreation, String nameOfArtist, String nameOfPortrait) {
+  public Portrait(Long portraitId, int dateOfCreation, String nameOfArtist, String nameOfPortrait) {
     this.portraitId = portraitId;
     this.dateOfCreation = dateOfCreation;
     this.nameOfArtist = nameOfArtist;

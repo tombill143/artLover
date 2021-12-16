@@ -1,16 +1,30 @@
 package com.example.artlover.Entity;
 
+
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
-  private int id;
+
+  @Id
+  private Long userId;
+
   private String password;
   private String emailAddress;
 
-  public int getId() {
-    return id;
+  public User() {
+
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setId(Long id) {
+    this.userId = id;
   }
 
   public String getPassword() {
@@ -29,8 +43,8 @@ public class User {
     this.emailAddress = emailAddress;
   }
 
-  public User(int id, String password, String emailAddress) {
-    this.id = id;
+  public User(Long id, String password, String emailAddress) {
+    this.userId = id;
     this.password = password;
     this.emailAddress = emailAddress;
   }

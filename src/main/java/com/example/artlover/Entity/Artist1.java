@@ -1,6 +1,15 @@
 package com.example.artlover.Entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Artist1 {
+  @Id
+  @Column(name = "artist_one_id", nullable = false)
+  private Long artistOneId;
+
   private int id;
   private String address;
   private int age;
@@ -8,6 +17,14 @@ public class Artist1 {
   private String firstName;
   private String secondName;
   private int updatePhoneNumber;
+
+  public Long getArtistOneId() {
+    return artistOneId;
+  }
+
+  public void setArtistOneId(Long artistOneId) {
+    this.artistOneId = artistOneId;
+  }
 
   public int getId() {
     return id;
