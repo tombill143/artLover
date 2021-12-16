@@ -12,6 +12,5 @@ public class Artist2Service {
     @Autowired
     public Artist2Service(Artist2Repo artist2Repo) {
     this.artist2Repo = artist2Repo;
-
   }
 }

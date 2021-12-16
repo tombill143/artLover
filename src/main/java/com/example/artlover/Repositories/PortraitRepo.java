@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface PortraitRepo extends JpaRepository<Portrait, Integer>{
+public interface PortraitRepo extends JpaRepository<Portrait,Long>{
 }
