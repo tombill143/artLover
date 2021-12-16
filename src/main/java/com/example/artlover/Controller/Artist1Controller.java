@@ -14,7 +14,7 @@ public class Artist1Controller{
   @Autowired
   Artist1Service artist1Service;
 
-  public Artist1Controller(Artist1Service artist2){
+  public Artist1Controller(Artist1Service artist1){
 
   }
 
@@ -47,7 +47,7 @@ public class Artist1Controller{
     Artist1 artistSeven = new Artist1(7, "5 Buckfast Close", 44, "faxmachinemessage@gmail.com", "Jasper", "Pampers", 61557532);
     Artist1 artistEight = new Artist1(8, "32 West Wallaby Street", 53, "iamasausage@yahoo.com", "Ron", "Waffle", 70541298);
     Artist1 artistNine = new Artist1(9, "9 Treebeard Lane", 70, "putthekettleon@AOL.com", "John", "Caramel", 50941777);
-     Artist1 artistTen= new Artist1(9, "101 Tick Tock drive", 70, "honkeytonk@gmail.com", "Don", "Bonkers", 60265811);
+     Artist1 artistTen= new Artist1(10, "101 Tick Tock drive", 70, "honkeytonk@gmail.com", "Don", "Bonkers", 60265811);
      artist1Service.getArtist1Repo().save(artist);
      artist1Service.getArtist1Repo().save(artistTwo);
      artist1Service.getArtist1Repo().save(artistThree);

@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 public class Artist2Service {
   private final Artist2Repo artist2Repo;
 
-
+  public Artist2Repo getArtist2Repo() {
+    return artist2Repo;
+  }
     @Autowired
     public Artist2Service(Artist2Repo artist2Repo) {
     this.artist2Repo = artist2Repo;
