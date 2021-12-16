@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PortraitService {
+  @Autowired
   private final PortraitRepo portraitRepo;
 
-  @Autowired
+
   public PortraitService(PortraitRepo portraitRepo){
     this.portraitRepo = portraitRepo;
   }
