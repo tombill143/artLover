@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 public class Artist1ShoppingCartService {
   private final Artist1ShoppingCartRepo artist1ShoppingCartRepo;
 
+  public Artist1ShoppingCartRepo getArtist1ShoppingCartRepo() {
+    return artist1ShoppingCartRepo;
+  }
 
   @Autowired
   public Artist1ShoppingCartService(Artist1ShoppingCartRepo artist1ShoppingCartRepo) {

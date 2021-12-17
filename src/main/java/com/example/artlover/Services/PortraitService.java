@@ -10,6 +10,9 @@ public class PortraitService {
   @Autowired
   private final PortraitRepo portraitRepo;
 
+  public PortraitRepo getPortraitRepo() {
+    return portraitRepo;
+  }
 
   public PortraitService(PortraitRepo portraitRepo){
     this.portraitRepo = portraitRepo;

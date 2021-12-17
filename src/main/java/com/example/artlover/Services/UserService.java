@@ -13,4 +13,8 @@ public class UserService {
     public UserService(UserRepo userRepo){
         this.userRepo = userRepo;
     }
+
+    public UserRepo getUserRepo() {
+        return userRepo;
+    }
 }

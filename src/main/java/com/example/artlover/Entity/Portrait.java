@@ -4,15 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Properties;
 
 @Entity
 public class Portrait {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long portraitId;
-  private int dateOfCreation;
+  private String dateOfCreation;
   private String nameOfArtist;
   private String nameOfPortrait;
+
+
 
   public Long getPortraitId() {
     return portraitId;
@@ -22,11 +25,11 @@ public class Portrait {
     this.portraitId = portraitId;
   }
 
-  public int getDateOfCreation() {
+  public String getDateOfCreation() {
     return dateOfCreation;
   }
 
-  public void setDateOfCreation(int dateOfCreation) {
+  public void setDateOfCreation(String dateOfCreation) {
     this.dateOfCreation = dateOfCreation;
   }
 
@@ -54,7 +57,7 @@ public class Portrait {
 
   }
 
-  public Portrait(Long portraitId, int dateOfCreation, String nameOfArtist, String nameOfPortrait) {
+  public Portrait(Long portraitId, String dateOfCreation, String nameOfArtist, String nameOfPortrait) {
     this.portraitId = portraitId;
     this.dateOfCreation = dateOfCreation;
     this.nameOfArtist = nameOfArtist;
