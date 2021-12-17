@@ -2,13 +2,16 @@ package com.example.artlover.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Artist2 {
   @Id
-  @Column(name = "artist_one_id", nullable = false)
-  private Long artistOneId;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "artist_two_id", nullable = false)
+  private Long artistTwoId;
 
   private int id;
     private String address;
@@ -18,12 +21,12 @@ public class Artist2 {
     private String secondName;
     private int updatePhoneNumber;
 
-  public Long getArtistOneId() {
-    return artistOneId;
+  public Long getArtistTwoId() {
+    return artistTwoId;
   }
 
-  public void setArtistOneId(Long artistOneId) {
-    this.artistOneId = artistOneId;
+  public void setArtistTwoId(Long artistTwoId) {
+    this.artistTwoId = artistTwoId;
   }
 
   public int getId() {

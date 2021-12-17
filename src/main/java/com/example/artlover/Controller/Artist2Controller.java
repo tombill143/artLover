@@ -1,9 +1,11 @@
 package com.example.artlover.Controller;
 
-
 import com.example.artlover.Entity.Artist2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.artlover.Services.*;
 
@@ -29,12 +31,10 @@ public class Artist2Controller{
     Artist2 artistFour = new Artist2(4, "44 Buckingham rd", 70, "handoham@outlook.com", "Jackson", "Pollock", 50243091);
     Artist2 artistFive = new Artist2(5, "60 Beech Rd", 33, "porkynbeans1973@gmail.com", "Frida", "Kahlo", 62708940 );
     Artist2 artistSix = new Artist2(6, "Strawberry Lane", 39, "timbull541@hotmail.com", "Gustav", "Klimt", 70645485 );
-    Artist2 artistSeven = new Artist2(7, "800 Mulberry Road", 65, "meltieclock@gmail.com", "Salvador", "Dali", 70872909 );
-    Artist2 artistEight = new Artist2(8, "800 Mulberry Road", 34, "ilovepitchforks@aol.com", "Grant", "Wood", 658804175 );
-    Artist2 artistNine = new Artist2(9, "800 Mulberry Road", 22, "thereverendcoyote@yahoo.com", "Edward", "Hopper", 65667466 );
-    Artist2 artistTen = new Artist2(10, "800 Mulberry Road", 50, "ilovemybed@imail.com", "Tracy", "Emmins", 60215373 );
-
-
+    Artist2 artistSeven = new Artist2(7, "107 Whitham rd", 65, "meltieclock@gmail.com", "Salvador", "Dali", 70872909 );
+    Artist2 artistEight = new Artist2(8, "62 Ecclesall rd", 34, "ilovepitchforks@aol.com", "Grant", "Wood", 658804175 );
+    Artist2 artistNine = new Artist2(9, "19 Wilbraham rd", 22, "thereverendcoyote@yahoo.com", "Edward", "Hopper", 65667466 );
+    Artist2 artistTen = new Artist2(10, "300 Barlow Moor rd", 50, "ilovemybed@imail.com", "Tracy", "Emmins", 60215373 );
     artist2Service.getArtist2Repo().save(artist);
     artist2Service.getArtist2Repo().save(artistTwo);
     artist2Service.getArtist2Repo().save(artistThree);

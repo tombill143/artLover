@@ -1,11 +1,14 @@
 package com.example.artlover.Entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Portrait {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long portraitId;
   private int dateOfCreation;
   private String nameOfArtist;
